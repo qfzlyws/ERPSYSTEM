@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SYSPROG" targetNamespace="http://tempuri.org/SYSPROG.xsd" xmlns:mstns="http://tempuri.org/SYSPROG.xsd" xmlns="http://tempuri.org/SYSPROG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.ERPSYSTEM.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="Oracle.ManagedDataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SYSPROGTableAdapter" GeneratorDataComponentClassName="SYSPROGTableAdapter" Name="SYSPROG" UserDataComponentName="SYSPROGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+     a.MIS_NO, 
+     c.mis_nm,
+     a.PROG_SEQ, 
+     a.PROG_NO, 
+     a.PROG_NM,
+     a.MOD_ID, 
+     b.mod_nm,
+     a.SORT
+FROM FMIS.SYSPROG a,fmis.sysmodule b,fmis.sysname c
+where a.mis_no = b.mis_no
+and a.mod_id = b.mod_id
+and b.mis_no = c.mis_no
+and a.stop_rmk = 'N'
+and a.mis_no = 'PUR'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MIS_NO" DataSetColumn="MIS_NO" />
+              <Mapping SourceColumn="PROG_SEQ" DataSetColumn="PROG_SEQ" />
+              <Mapping SourceColumn="PROG_NO" DataSetColumn="PROG_NO" />
+              <Mapping SourceColumn="PROG_NM" DataSetColumn="PROG_NM" />
+              <Mapping SourceColumn="MOD_ID" DataSetColumn="MOD_ID" />
+              <Mapping SourceColumn="SORT" DataSetColumn="SORT" />
+              <Mapping SourceColumn="MIS_NM" DataSetColumn="MIS_NM" />
+              <Mapping SourceColumn="MOD_NM" DataSetColumn="MOD_NM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SYSPROG" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SYSPROG" msprop:Generator_UserDSName="SYSPROG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SYSPROG" msprop:Generator_TableClassName="SYSPROGDataTable" msprop:Generator_TableVarName="tableSYSPROG" msprop:Generator_RowChangedName="SYSPROGRowChanged" msprop:Generator_TablePropName="_SYSPROG" msprop:Generator_RowDeletingName="SYSPROGRowDeleting" msprop:Generator_RowChangingName="SYSPROGRowChanging" msprop:Generator_RowEvHandlerName="SYSPROGRowChangeEventHandler" msprop:Generator_RowDeletedName="SYSPROGRowDeleted" msprop:Generator_RowClassName="SYSPROGRow" msprop:Generator_UserTableName="SYSPROG" msprop:Generator_RowEvArgName="SYSPROGRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MIS_NO" msprop:Generator_ColumnVarNameInTable="columnMIS_NO" msprop:Generator_ColumnPropNameInRow="MIS_NO" msprop:Generator_ColumnPropNameInTable="MIS_NOColumn" msprop:Generator_UserColumnName="MIS_NO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROG_SEQ" msprop:Generator_ColumnVarNameInTable="columnPROG_SEQ" msprop:Generator_ColumnPropNameInRow="PROG_SEQ" msprop:Generator_ColumnPropNameInTable="PROG_SEQColumn" msprop:Generator_UserColumnName="PROG_SEQ">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROG_NO" msprop:Generator_ColumnVarNameInTable="columnPROG_NO" msprop:Generator_ColumnPropNameInRow="PROG_NO" msprop:Generator_ColumnPropNameInTable="PROG_NOColumn" msprop:Generator_UserColumnName="PROG_NO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROG_NM" msprop:Generator_ColumnVarNameInTable="columnPROG_NM" msprop:Generator_ColumnPropNameInRow="PROG_NM" msprop:Generator_ColumnPropNameInTable="PROG_NMColumn" msprop:Generator_UserColumnName="PROG_NM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOD_ID" msprop:Generator_ColumnVarNameInTable="columnMOD_ID" msprop:Generator_ColumnPropNameInRow="MOD_ID" msprop:Generator_ColumnPropNameInTable="MOD_IDColumn" msprop:Generator_UserColumnName="MOD_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SORT" msprop:Generator_ColumnVarNameInTable="columnSORT" msprop:Generator_ColumnPropNameInRow="SORT" msprop:Generator_ColumnPropNameInTable="SORTColumn" msprop:Generator_UserColumnName="SORT" type="xs:int" minOccurs="0" />
+              <xs:element name="MIS_NM" msprop:Generator_ColumnVarNameInTable="columnMIS_NM" msprop:Generator_ColumnPropNameInRow="MIS_NM" msprop:Generator_ColumnPropNameInTable="MIS_NMColumn" msprop:Generator_UserColumnName="MIS_NM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOD_NM" msprop:Generator_ColumnVarNameInTable="columnMOD_NM" msprop:Generator_ColumnPropNameInRow="MOD_NM" msprop:Generator_ColumnPropNameInTable="MOD_NMColumn" msprop:Generator_UserColumnName="MOD_NM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SYSPROG" />
+      <xs:field xpath="mstns:MIS_NO" />
+      <xs:field xpath="mstns:PROG_SEQ" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

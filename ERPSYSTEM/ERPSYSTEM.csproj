@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7688E8D8-015D-482A-A042-78BB8144549D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERPSYSTEM</RootNamespace>
+    <AssemblyName>ERPSYSTEM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>COMMON\main.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\VendorBLL.cs" />
+    <Compile Include="DataSets\BOM1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\VendorColumnChanging.cs" />
+    <Compile Include="BOMForms\W_BOM_ENT_MA1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOMForms\W_BOM_ENT_MA1.Designer.cs">
+      <DependentUpon>W_BOM_ENT_MA1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMMON\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMMON\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMMON\EditSingleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMMON\EditSingleForm.Designer.cs">
+      <DependentUpon>EditSingleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMMON\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMMON\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\BorDAO.cs" />
+    <Compile Include="DataSets\BOM.cs">
+      <DependentUpon>BOM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\BOM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COMMON\Utilities.cs" />
+    <Compile Include="DataSets\PUR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\VendKind.cs" />
+    <Compile Include="Desktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desktop.Designer.cs">
+      <DependentUpon>Desktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MdiWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MdiWin.Designer.cs">
+      <DependentUpon>MdiWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataSets\SYSPROG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SYSPROG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PURForms\W_PUR_ENT_MA1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PURForms\W_PUR_ENT_MA1.Designer.cs">
+      <DependentUpon>W_PUR_ENT_MA1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BOMForms\W_BOM_ENT_MA1.resx">
+      <DependentUpon>W_BOM_ENT_MA1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMMON\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMMON\EditSingleForm.resx">
+      <DependentUpon>EditSingleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desktop.resx">
+      <DependentUpon>Desktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MdiWin.resx">
+      <DependentUpon>MdiWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PURForms\W_PUR_ENT_MA1.resx">
+      <DependentUpon>W_PUR_ENT_MA1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSets\BOM.xsc">
+      <DependentUpon>BOM.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\BOM.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BOM1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\BOM.xss">
+      <DependentUpon>BOM.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\PUR.xsc">
+      <DependentUpon>PUR.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\PUR.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PUR.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\PUR.xss">
+      <DependentUpon>PUR.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\ERPSYSTEM.DataSets.VendKind.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="DataSets\SYSPROG.xsc">
+      <DependentUpon>SYSPROG.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SYSPROG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SYSPROG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\SYSPROG.xss">
+      <DependentUpon>SYSPROG.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="COMMON\main.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
